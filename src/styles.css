@@ -150,7 +150,15 @@
   }
 
   .btn-gold-premium {
-    @apply px-10 py-4 bg-[#d1ae6e] text-white font-bold rounded-full hover:bg-[#c2a05d] transition-all duration-500 shadow-[0_10px_20px_-5px_rgba(209,174,110,0.4)] hover:shadow-[0_20px_30px_-10px_rgba(209,174,110,0.6)] active:scale-95 text-xs uppercase tracking-[0.2em] text-center inline-block border border-[#e5c98e];
+    @apply px-10 py-4 bg-[#d1ae6e] text-white font-bold rounded-full hover:bg-[#c2a05d] transition-all duration-500 shadow-[0_10px_20px_-5px_rgba(209,174,110,0.6)] hover:shadow-[0_20px_35px_-10px_rgba(209,174,110,0.8)] active:scale-95 text-xs uppercase tracking-[0.2em] text-center inline-block border border-[#e5c98e] relative overflow-hidden;
+  }
+  
+  .btn-gold-premium::after {
+    @apply content-[''] absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/30 to-transparent rotate-45 transition-all duration-1000 translate-x-[-100%];
+  }
+  
+  .btn-gold-premium:hover::after {
+    @apply translate-x-[100%];
   }
 
   .btn-wine-premium {
