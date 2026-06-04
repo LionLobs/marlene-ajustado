@@ -440,16 +440,7 @@ function Home() {
           box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
           font-family: 'Montserrat', sans-serif;
         }
-        .btn-gold-premium::before {
-          content: '';
-          position: absolute;
-          top: 0; left: -100%;
-          width: 100%; height: 100%;
-          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-          transition: all 0.6s ease;
-        }
         ::selection { background: #921b3c; color: #fff; }
-      `}</style>
       `}</style>
     </div>
   );
