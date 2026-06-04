@@ -123,9 +123,9 @@ function Home() {
                 <span className="text-sm font-semibold text-[#d1ae6e] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000 drop-shadow-sm">Transformação & Propósito</span>
                 <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#b8860b] bg-clip-text text-transparent bg-gradient-to-r from-[#b8860b] via-[#daa520] to-[#b8860b] bg-[length:200%_auto] animate-[gold-shine_5s_linear_infinite]">Assumir Potência</span></h1>
                 <div className="flex items-center gap-6 py-4 animate-in fade-in zoom-in duration-1000 delay-500">
-                  <div className="h-[2px] w-12 bg-[#d1ae6e]"></div>
+                  <div className="h-[2px] w-8 sm:w-12 bg-[#b8860b]"></div>
                   <span className="text-[10px] sm:text-xs font-bold text-[#b8860b] tracking-[0.5em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
-                  <div className="h-[2px] w-12 bg-[#d1ae6e]"></div>
+                  <div className="h-[2px] w-8 sm:w-12 bg-[#b8860b]"></div>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg font-light animate-in fade-in slide-in-from-bottom duration-1000 delay-700">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito.</p>
               </div>
