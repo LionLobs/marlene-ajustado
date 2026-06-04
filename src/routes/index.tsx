@@ -421,25 +421,6 @@ function Home() {
 
       {/* GLOBAL STYLES */}
       <style>{`
-        .btn-gold-premium {
-          position: relative;
-          display: inline-block;
-          padding: 18px 45px;
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: #1a1a1a;
-          text-decoration: none;
-          background: linear-gradient(135deg, #d4af37 0%, #f9e498 50%, #b8860b 100%);
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          overflow: hidden;
-          transition: all 0.4s ease;
-          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-          font-family: 'Montserrat', sans-serif;
-        }
         ::selection { background: #921b3c; color: #fff; }
       `}</style>
     </div>
