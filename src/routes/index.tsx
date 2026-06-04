@@ -119,23 +119,23 @@ function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <span className="text-sm font-semibold text-[#d1ae6e] tracking-widest uppercase">Transformação & Propósito</span>
-                <h1 className="text-5xl lg:text-6xl font-serif font-bold text-[#921b3c] leading-tight">Reconstruir Identidade, Assumir Potência</h1>
-                <div className="flex items-center gap-4 py-6">
-                  <div className="flex-1 h-0.5 bg-gradient-to-r from-[#d1ae6e] to-transparent"></div>
-                  <span className="text-xs sm:text-sm font-semibold text-[#d1ae6e] tracking-widest uppercase whitespace-nowrap">MARLENE CORRÊA</span>
-                  <div className="flex-1 h-0.5 bg-gradient-to-l from-[#d1ae6e] to-transparent"></div>
+              <div className="space-y-6">
+                <span className="text-sm font-semibold text-[#d1ae6e] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000">Transformação & Propósito</span>
+                <h1 className="text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#d1ae6e]">Assumir Potência</span></h1>
+                <div className="flex items-center gap-6 py-4 animate-in fade-in zoom-in duration-1000 delay-500">
+                  <div className="h-[1px] w-12 bg-[#d1ae6e]"></div>
+                  <span className="text-xs font-bold text-[#d1ae6e] tracking-[0.4em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
+                  <div className="h-[1px] w-12 bg-[#d1ae6e]"></div>
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed max-w-md">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito, maturidade emocional e direção.</p>
+                <p className="text-xl text-gray-600 leading-relaxed max-w-lg font-light animate-in fade-in slide-in-from-bottom duration-1000 delay-700">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito.</p>
               </div>
-              <div className="space-y-3">
-                <p className="text-gray-600 font-medium">Não é apenas sobre mudança profissional.</p>
-                <p className="text-gray-600 italic">É sobre reconstruir identidade e assumir a potência que a maturidade trouxe.</p>
+              <div className="space-y-4 border-l-2 border-[#d1ae6e]/20 pl-6 py-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-900">
+                <p className="text-gray-500 font-medium tracking-wide text-balance">Não é apenas sobre mudança profissional.</p>
+                <p className="text-[#921b3c] italic text-lg">"É sobre reconstruir identidade e assumir a potência que a maturidade trouxe."</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="https://wa.me/5511973356733?text=Olá%20Marlene!%20Gostaria%20de%20solicitar%20uma%20aplicação%20para%20um%20de%20seus%20programas." target="_blank" rel="noopener noreferrer" className="btn-gold-premium inline-block text-center">Solicitar Aplicação</a>
-                <a href="#contato" className="btn-wine-premium inline-block text-center">Conhecer Mais</a>
+              <div className="flex flex-col sm:flex-row gap-6 pt-6 animate-in fade-in slide-in-from-bottom duration-1000 delay-1000">
+                <a href="https://wa.me/5511973356733?text=Olá%20Marlene!%20Gostaria%20de%20solicitar%20uma%20aplicação%20para%20um%20de%20seus%20programas." target="_blank" rel="noopener noreferrer" className="btn-gold-premium">Solicitar Aplicação</a>
+                <a href="#contato" className="btn-wine-premium">Conhecer Mais</a>
               </div>
             </div>
             <div className="relative h-96 lg:h-full min-h-96">
