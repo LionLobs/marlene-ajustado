@@ -1,9 +1,6 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "framework": "tanstack-start",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".output"
 }
