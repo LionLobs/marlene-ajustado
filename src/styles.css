@@ -220,7 +220,7 @@
   /* Elegant Section Title Underline */
   .section-underline {
     @apply h-1 w-24 rounded-full mt-4;
-    background: linear-gradient(90deg, #d4af37 0%, #921b3c 50%, #d4af37 100%);
+    background: linear-gradient(90deg, #8b7355 0%, #921b3c 50%, #8b7355 100%);
     background-size: 200% auto;
     animation: gold-shine 7s linear infinite;
   }
