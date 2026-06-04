@@ -216,24 +216,22 @@ function Home() {
       </section>
 
       {/* SCROLLING PARTNERS/TOPICS MARQUEE */}
-      <div className="bg-[#f9f7f4] border-y border-[#d1ae6e]/20">
-        <div className="marquee-container">
-          <div className="marquee-content">
-            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-                <Star className="w-4 h-4 text-[#d1ae6e]" />
-              </div>
-            ))}
-          </div>
-          <div className="marquee-content" aria-hidden="true">
-            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-                <Star className="w-4 h-4 text-[#d1ae6e]" />
-              </div>
-            ))}
-          </div>
+      <div className="marquee-container">
+        <div className="marquee-content">
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={idx} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
+        </div>
+        <div className="marquee-content" aria-hidden="true">
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={idx} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
         </div>
       </div>
 
