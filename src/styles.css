@@ -146,31 +146,39 @@
 
 @layer components {
   .premium-card {
-    @apply relative p-8 bg-white rounded-3xl shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_-15px_rgba(146,27,60,0.2)] transition-all duration-700 border border-[#d1ae6e]/10 overflow-hidden hover:-translate-y-2;
+    @apply relative p-6 sm:p-8 bg-white rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)] hover:shadow-[0_30px_60px_-15px_rgba(146,27,60,0.25)] transition-all duration-700 border border-[#b8860b]/10 overflow-hidden hover:-translate-y-2;
   }
 
   .btn-gold-premium {
-    @apply px-10 py-4 font-bold rounded-full transition-all duration-700 active:scale-95 text-xs uppercase tracking-[0.2em] text-center inline-block relative overflow-hidden text-white;
-    background: linear-gradient(135deg, #c5a059 0%, #e8d2a6 50%, #c5a059 100%);
+    @apply px-8 sm:px-10 py-4 font-bold rounded-full transition-all duration-700 active:scale-95 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-center inline-block relative overflow-hidden text-white;
+    background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);
     background-size: 200% auto;
-    box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(232, 210, 166, 0.5);
-    animation: gold-shine 6s ease-in-out infinite;
+    box-shadow: 0 12px 25px -5px rgba(184, 134, 11, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(218, 165, 32, 0.6);
+    animation: gold-shine 5s ease-in-out infinite;
   }
   
   .btn-gold-premium:hover {
     @apply -translate-y-1;
     background-position: right center;
-    box-shadow: 0 15px 35px -10px rgba(197, 160, 89, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3);
-    border-color: rgba(232, 210, 166, 0.8);
+    box-shadow: 0 18px 35px -10px rgba(184, 134, 11, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+    border-color: rgba(218, 165, 32, 0.9);
   }
   
   .btn-gold-premium::after {
-    @apply content-[''] absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-25deg] transition-all duration-1000;
+    @apply content-[''] absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-[-25deg] transition-all duration-1000;
   }
   
   .btn-gold-premium:hover::after {
     @apply left-[100%];
+  }
+
+  .btn-wine-premium {
+    @apply px-8 sm:px-10 py-4 bg-transparent border-2 border-[#921b3c] text-[#921b3c] font-bold rounded-full hover:bg-[#921b3c] hover:text-white transition-all duration-500 active:scale-95 text-[10px] sm:text-xs uppercase tracking-[0.2em] shadow-[0_8px_20px_-8px_rgba(146,27,60,0.4)] hover:shadow-[0_12px_25px_-5px_rgba(146,27,60,0.3)] text-center inline-block;
+  }
+
+  .testimonial-card {
+    @apply bg-white/5 backdrop-blur-xl p-6 sm:p-8 rounded-[2rem] border border-white/10 text-white hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)];
   }
 
   @keyframes gold-shine {
@@ -212,9 +220,9 @@
   /* Elegant Section Title Underline */
   .section-underline {
     @apply h-1 w-24 rounded-full mt-4;
-    background: linear-gradient(90deg, #c5a059 0%, #921b3c 50%, #c5a059 100%);
+    background: linear-gradient(90deg, #b8860b 0%, #921b3c 50%, #b8860b 100%);
     background-size: 200% auto;
-    animation: gold-shine 8s linear infinite;
+    animation: gold-shine 6s linear infinite;
   }
 }
 
