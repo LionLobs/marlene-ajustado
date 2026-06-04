@@ -151,7 +151,7 @@ function Home() {
         </div>
       </section>
 
-      <div className="h-1 bg-gradient-to-r from-transparent via-[#d1ae6e] to-transparent"></div>
+      <div className="h-1 bg-gradient-to-r from-transparent via-[#8b7355] to-transparent"></div>
 
       {/* ABOUT */}
       <section id="sobre" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[#f9f7f4]">
