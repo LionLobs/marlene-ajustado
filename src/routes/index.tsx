@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Lock, Calendar, CheckCircle2, Star, X, Mail, Phone, Instagram } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
