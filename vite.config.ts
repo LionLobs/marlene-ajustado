@@ -5,7 +5,7 @@ export default defineConfig({
     server: { 
       entry: "server",
       // @ts-ignore
-      preset: "vercel" 
+      preset: "vercel"
     },
   },
 });
