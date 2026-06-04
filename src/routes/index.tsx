@@ -120,12 +120,12 @@ function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <span className="text-sm font-semibold text-[#d1ae6e] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000 drop-shadow-sm">Transformação & Propósito</span>
-                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#d4af37] bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] via-[#f9e29b] to-[#d4af37] bg-[length:200%_auto] animate-[gold-shine_6s_linear_infinite]">Assumir Potência</span></h1>
+                <span className="text-sm font-semibold text-[#8b7355] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000 drop-shadow-sm">Transformação & Propósito</span>
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#8b7355] bg-clip-text text-transparent bg-gradient-to-r from-[#8b7355] via-[#c5a059] to-[#8b7355] bg-[length:200%_auto] animate-[gold-shine_6s_linear_infinite]">Assumir Potência</span></h1>
                 <div className="flex items-center gap-6 py-4 animate-in fade-in zoom-in duration-1000 delay-500">
-                  <div className="h-[2px] w-8 sm:w-12 bg-[#d4af37]"></div>
-                  <span className="text-[10px] sm:text-xs font-bold text-[#d4af37] tracking-[0.5em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
-                  <div className="h-[2px] w-8 sm:w-12 bg-[#d4af37]"></div>
+                  <div className="h-[2px] w-8 sm:w-12 bg-[#8b7355]"></div>
+                  <span className="text-[10px] sm:text-xs font-bold text-[#8b7355] tracking-[0.5em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
+                  <div className="h-[2px] w-8 sm:w-12 bg-[#8b7355]"></div>
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg font-light animate-in fade-in slide-in-from-bottom duration-1000 delay-700">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito.</p>
               </div>
