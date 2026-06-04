@@ -448,61 +448,8 @@ function Home() {
           background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
           transition: all 0.6s ease;
         }
-        .btn-gold-premium:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-          color: #000;
-        }
-        .btn-gold-premium:hover::before { left: 100%; }
-        .btn-gold-premium:active { transform: translateY(-1px); }
-
-        .btn-wine-premium {
-          padding: 18px 45px;
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: #ffffff;
-          text-decoration: none;
-          background: #921b3c;
-          border-radius: 4px;
-          transition: all 0.4s ease;
-          box-shadow: 0 4px 15px rgba(146, 27, 60, 0.3);
-        }
-        .btn-wine-premium:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(146, 27, 60, 0.5);
-        }
-
-        .premium-card {
-          background: #fff;
-          border-radius: 1.5rem;
-          padding: 2rem;
-          border: 1px solid #e5e5e5;
-          position: relative;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        .premium-card:hover {
-          transform: translateY(-0.5rem);
-          box-shadow: 0 25px 50px -12px rgba(146, 27, 60, 0.25);
-          border-color: #d1ae6e;
-        }
-
-        .testimonial-card {
-          background: #fff;
-          border-radius: 1.5rem;
-          padding: 1.5rem;
-          border: 1px solid rgba(255,255,255,0.2);
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .testimonial-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-
         ::selection { background: #921b3c; color: #fff; }
+      `}</style>
       `}</style>
     </div>
   );
