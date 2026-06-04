@@ -216,18 +216,32 @@ function Home() {
       </section>
 
       {/* SCROLLING PARTNERS/TOPICS MARQUEE */}
-      <div className="marquee-container">
+      <div className="marquee-container" style={{ "--marquee-duration": "80s" } as React.CSSProperties}>
         <div className="marquee-content">
-          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA", "AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
             <div key={idx} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={`dup1-${idx}`} className="flex items-center gap-10">
               <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
               <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
             </div>
           ))}
         </div>
         <div className="marquee-content" aria-hidden="true">
-          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA", "AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-            <div key={idx} className="flex items-center gap-10">
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={`dup2-${idx}`} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={`dup3-${idx}`} className="flex items-center gap-10">
               <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
               <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
             </div>

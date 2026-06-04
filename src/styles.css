@@ -169,25 +169,24 @@
     @apply bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 text-white hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl;
   }
 
-  /* Refined Marquee */
+  /* Refined Marquee with CSS Variable for speed */
   .marquee-container {
     @apply flex overflow-hidden select-none gap-20 py-20 bg-[#f9f7f4] border-y border-[#d1ae6e]/20;
+    --marquee-duration: 60s;
   }
 
   .marquee-content {
-    @apply flex shrink-0 justify-around items-center min-w-full gap-20 animate-marquee;
+    @apply flex shrink-0 justify-around items-center min-w-full gap-20;
+    animation: marquee var(--marquee-duration) linear infinite;
+    will-change: transform;
   }
 
   @keyframes marquee {
     from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+    to { transform: translateX(calc(-100% - 5rem)); /* Adjust for the gap */ }
   }
 
-  .animate-marquee {
-    animation: marquee 50s linear infinite;
-  }
-
-  .marquee-container:hover .animate-marquee {
+  .marquee-container:hover .marquee-content {
     animation-play-state: paused;
   }
 
