@@ -162,9 +162,9 @@ function Home() {
               <div className="section-underline"></div>
             </div>
             <div className="lg:col-span-2 space-y-8">
-              <p className="text-xl text-gray-700 leading-relaxed font-light">Profissional em saúde mental como <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
+              <p className="text-xl text-gray-700 leading-relaxed font-light">Profissional em saúde mental como <span className="font-semibold text-[#921b3c] border-b-2 border-[#8b7355]/30">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c] border-b-2 border-[#8b7355]/30">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
               <p className="text-xl text-gray-700 leading-relaxed font-light">Conduzo mulheres que desejam romper padrões, ressignificar sua história e reconstruir carreira com propósito, maturidade emocional e direção.</p>
-              <div className="p-8 bg-white rounded-2xl shadow-sm border-l-4 border-[#d1ae6e]">
+              <div className="p-8 bg-white rounded-2xl shadow-sm border-l-4 border-[#8b7355]">
                 <p className="text-gray-600 italic leading-relaxed">"Com mais de 20 anos de experiência no mercado corporativo, incluindo atuação como gerente de serviços em empresa multinacional, uno conhecimento organizacional à prática clínica."</p>
               </div>
             </div>
