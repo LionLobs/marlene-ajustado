@@ -161,8 +161,8 @@
   .btn-gold-premium:hover {
     @apply -translate-y-1;
     background-position: right center;
-    box-shadow: 0 18px 35px -10px rgba(212, 175, 55, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.35);
-    border-color: rgba(249, 226, 155, 0.9);
+    box-shadow: 0 18px 35px -10px rgba(139, 115, 85, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+    border-color: rgba(197, 160, 89, 0.7);
   }
   
   .btn-gold-premium::after {
