@@ -139,8 +139,8 @@ function Home() {
               </div>
             </div>
             <div className="relative h-96 lg:h-full min-h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#d1ae6e]/20 to-[#921b3c]/20 rounded-3xl blur-3xl"></div>
-              <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-[#d1ae6e]">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8b7355]/20 to-[#921b3c]/20 rounded-3xl blur-3xl"></div>
+              <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-[#8b7355]">
                 <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/marlene_5ca82bea.png" alt="Marlene Corrêa" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#921b3c]/20 to-transparent"></div>
               </div>
