@@ -302,7 +302,7 @@ function Home() {
             <div className="section-underline mx-auto bg-white/40"></div>
             <p className="text-white/80 text-xl max-w-2xl mx-auto font-light pt-4">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
           </div>
-          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+          <div ref={testimonialsRef} className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
             {testimonials.map((t, i) => (
               <div key={i} className="testimonial-card group min-w-[85vw] md:min-w-0 snap-center">
                 <div className="flex gap-1 mb-6">
