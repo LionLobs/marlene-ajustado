@@ -88,7 +88,7 @@ function Home() {
           </div>
           <nav className="hidden md:flex gap-10">
             {["sobre","programas","depoimentos","servicos","faq","contato"].map((s) => (
-              <a key={s} href={`#${s}`} className="text-[13px] font-semibold text-white/80 hover:text-[#d1ae6e] transition-all duration-300 capitalize tracking-[0.2em] relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#d1ae6e] after:transition-all hover:after:w-full">{s === "faq" ? "FAQ" : s}</a>
+              <a key={s} href={`#${s}`} className="text-[13px] font-semibold text-white/80 hover:text-[#c5a059] transition-all duration-300 capitalize tracking-[0.2em] relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#c5a059] after:transition-all hover:after:w-full">{s === "faq" ? "FAQ" : s}</a>
             ))}
           </nav>
           <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden p-2 text-white hover:text-[#d1ae6e] transition-colors rounded-full hover:bg-white/10">
