@@ -83,7 +83,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
-              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-14 w-auto transition-transform duration-500 group-hover:scale-110" />
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-16 sm:h-20 w-auto transition-transform duration-500 group-hover:scale-110" />
             </div>
           </div>
           <nav className="hidden md:flex gap-10">
