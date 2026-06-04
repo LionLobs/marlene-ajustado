@@ -427,7 +427,7 @@ function Home() {
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col items-center justify-center text-sm text-white/80 space-y-4">
               <p>&copy; 2026 Marlene Corrêa. Todos os direitos reservados</p>
-              <p className="text-[#d1ae6e] font-semibold">✦ Feito com excelência ✦</p>
+              <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#d1ae6e] via-[#f7e1b5] to-[#d1ae6e] bg-[length:200%_auto] animate-[gold-shine_4s_linear_infinite]">✦ Feito com excelência ✦</p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-[#d1ae6e] transition-colors">Privacidade</a>
                 <a href="#" className="hover:text-[#d1ae6e] transition-colors">Termos</a>
