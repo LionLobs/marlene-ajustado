@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Lock, Calendar, CheckCircle2, Star, X, Mail, Phone, Instagram } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -35,6 +35,51 @@ function Home() {
   const [captureFormData, setCaptureFormData] = useState<FormData>({ name: "", email: "", phone: "", message: "" });
   const [, setShowCaptureForm] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const programsRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = (ref: React.RefObject<HTMLDivElement | null>) => {
+      const container = ref.current;
+      if (!container) return;
+      
+      let isHovered = false;
+      const onMouseEnter = () => { isHovered = true; };
+      const onMouseLeave = () => { isHovered = false; };
+      const onTouchStart = () => { isHovered = true; };
+      const onTouchEnd = () => { isHovered = false; };
+
+      container.addEventListener('mouseenter', onMouseEnter);
+      container.addEventListener('mouseleave', onMouseLeave);
+      container.addEventListener('touchstart', onTouchStart);
+      container.addEventListener('touchend', onTouchEnd);
+
+      const interval = setInterval(() => {
+        if (window.innerWidth >= 768 || isHovered) return;
+        
+        container.scrollLeft += 1;
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 1) {
+          container.scrollLeft = 0;
+        }
+      }, 30);
+
+      return () => {
+        clearInterval(interval);
+        container.removeEventListener('mouseenter', onMouseEnter);
+        container.removeEventListener('mouseleave', onMouseLeave);
+        container.removeEventListener('touchstart', onTouchStart);
+        container.removeEventListener('touchend', onTouchEnd);
+      };
+    };
+
+    const cleanupPrograms = scrollContainer(programsRef);
+    const cleanupTestimonials = scrollContainer(testimonialsRef);
+
+    return () => {
+      cleanupPrograms?.();
+      cleanupTestimonials?.();
+    };
+  }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -180,7 +225,7 @@ function Home() {
             <div className="section-underline mx-auto"></div>
             <p className="text-gray-500 text-xl max-w-2xl mx-auto font-light pt-4">Processos estruturados e seletivos para sua reconstrução profissional e pessoal</p>
           </div>
-          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+          <div ref={programsRef} className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
             {[
               { id: "exclusivo", title: "Reconstrução 40+", subtitle: "Método Identidade Estratégica™", availability: "Sob Aplicação Seletiva", desc: "Processo profundo, estruturado e seletivo para mulheres 40+ que desejam reconstruir identidade, direção e propósito com estratégia e maturidade emocional.", features: ["10 semanas individuais","Diagnóstico emocional profundo","Ressignificação de padrões","Plano de posicionamento profissional"], note: "O investimento é apresentado exclusivamente na Conversa de Alinhamento.", cta: "Solicitar Aplicação", link: "https://wa.me/5511973356733?text=Ol%C3%A1%20Marlene!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Programa%20Reconstrução%2040%2B.", gradient: "from-[#8b7355] to-[#ad4a60]", showLock: true },
               { id: "essencial", title: "Jornada Essencial", subtitle: "Reconstrução 40+", availability: "Entrada Contínua", desc: "Processo estruturado de 5 semanas para mulheres que precisam de clareza emocional e direção estratégica para iniciar sua reconstrução.", features: ["5 semanas estruturadas","Clareza emocional","Direção estratégica","Possibilidade de evolução"], note: "Participantes podem ter parte do investimento considerado na evolução para o Programa Exclusivo.", cta: "Iniciar Jornada Essencial", link: "https://wa.me/5511973356733?text=Ol%C3%A1%20Marlene!%20Gostaria%20de%20iniciar%20a%20Jornada%20Essencial.", gradient: "from-[#ad4a60] to-[#921b3c]", showLock: false },
@@ -257,7 +302,7 @@ function Home() {
             <div className="section-underline mx-auto bg-white/40"></div>
             <p className="text-white/80 text-xl max-w-2xl mx-auto font-light pt-4">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
           </div>
-          <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+          <div ref={testimonialsRef} className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
             {testimonials.map((t, i) => (
               <div key={i} className="testimonial-card group min-w-[85vw] md:min-w-0 snap-center">
                 <div className="flex gap-1 mb-6">
