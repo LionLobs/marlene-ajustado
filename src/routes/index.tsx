@@ -239,19 +239,20 @@ function Home() {
       <section id="depoimentos" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#921b3c] to-[#ad4a60]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white">Histórias de Transformação</h2>
-            <p className="text-white/90 text-lg max-w-2xl mx-auto">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
+            <h2 className="text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">Histórias de Transformação</h2>
+            <div className="section-underline mx-auto bg-white/40"></div>
+            <p className="text-white/80 text-xl max-w-2xl mx-auto font-light pt-4">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t, i) => (
               <div key={i} className="testimonial-card group">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, j) => (<Star key={j} className="w-4 h-4 fill-[#d1ae6e] text-[#d1ae6e]" />))}
+                <div className="flex gap-1 mb-6">
+                  {[...Array(t.rating)].map((_, j) => (<Star key={j} className="w-5 h-5 fill-[#d1ae6e] text-[#d1ae6e] opacity-80" />))}
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">"{t.text}"</p>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="font-semibold text-[#921b3c]">{t.name}</p>
-                  <p className="text-xs text-[#ad4a60] tracking-wide">{t.role}</p>
+                <p className="text-white/90 leading-relaxed mb-8 italic text-lg font-light line-clamp-6">"{t.text}"</p>
+                <div className="pt-6 border-t border-white/10 mt-auto">
+                  <p className="font-serif text-2xl text-[#d1ae6e] mb-1">{t.name}</p>
+                  <p className="text-[10px] text-white/50 tracking-[0.2em] uppercase">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -268,8 +269,8 @@ function Home() {
             </div>
             <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-4">
-                <h2 className="text-4xl font-serif font-bold text-[#921b3c]">Saúde Mental Corporativa</h2>
-                <div className="h-1 w-16 bg-gradient-to-r from-[#d1ae6e] to-[#ad4a60]"></div>
+                <h2 className="text-5xl font-serif font-bold text-[#921b3c] leading-tight">Saúde Mental<br />Corporativa</h2>
+                <div className="section-underline"></div>
               </div>
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 leading-relaxed">Programas Corporativos em Saúde Mental & NR-1. Atuação estratégica para empresas com foco em prevenção de riscos psicossociais e implementação de programas contínuos de saúde mental.</p>
