@@ -1,5 +1,6 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "outputDirectory": ".output/public"
+  "framework": "tanstack-start",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".output"
 }
