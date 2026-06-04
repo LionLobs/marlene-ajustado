@@ -197,7 +197,7 @@
 
   /* Refined Marquee with CSS Variable for speed */
   .marquee-container {
-    @apply flex overflow-hidden select-none gap-20 py-20 border-y border-[#d1ae6e]/20;
+    @apply flex overflow-hidden select-none gap-20 py-20 border-y border-[#8b7355]/20;
     background: radial-gradient(circle at center, #ffffff 0%, #f9f7f4 100%);
     --marquee-duration: 60s;
   }
