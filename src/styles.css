@@ -211,7 +211,10 @@
 
   /* Elegant Section Title Underline */
   .section-underline {
-    @apply h-1 w-24 bg-gradient-to-r from-[#d1ae6e] via-[#921b3c] to-transparent rounded-full mt-4;
+    @apply h-1 w-24 rounded-full mt-4;
+    background: linear-gradient(90deg, #d1ae6e 0%, #921b3c 50%, #d1ae6e 100%);
+    background-size: 200% auto;
+    animation: gold-shine 5s linear infinite;
   }
 }
 
