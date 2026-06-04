@@ -39,23 +39,37 @@ function Home() {
   const testimonialsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const scrollContainer = (ref: React.RefObject<HTMLDivElement>) => {
-      if (!ref.current) return;
+    const scrollContainer = (ref: React.RefObject<HTMLDivElement | null>) => {
       const container = ref.current;
-      let scrollAmount = 0;
-      const step = 1;
+      if (!container) return;
+      
+      let isHovered = false;
+      const onMouseEnter = () => { isHovered = true; };
+      const onMouseLeave = () => { isHovered = false; };
+      const onTouchStart = () => { isHovered = true; };
+      const onTouchEnd = () => { isHovered = false; };
+
+      container.addEventListener('mouseenter', onMouseEnter);
+      container.addEventListener('mouseleave', onMouseLeave);
+      container.addEventListener('touchstart', onTouchStart);
+      container.addEventListener('touchend', onTouchEnd);
+
       const interval = setInterval(() => {
-        if (window.innerWidth >= 768) {
-          clearInterval(interval);
-          return;
-        }
-        container.scrollLeft += step;
-        scrollAmount += step;
-        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        if (window.innerWidth >= 768 || isHovered) return;
+        
+        container.scrollLeft += 1;
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 1) {
           container.scrollLeft = 0;
         }
       }, 30);
-      return () => clearInterval(interval);
+
+      return () => {
+        clearInterval(interval);
+        container.removeEventListener('mouseenter', onMouseEnter);
+        container.removeEventListener('mouseleave', onMouseLeave);
+        container.removeEventListener('touchstart', onTouchStart);
+        container.removeEventListener('touchend', onTouchEnd);
+      };
     };
 
     const cleanupPrograms = scrollContainer(programsRef);
