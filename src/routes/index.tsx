@@ -121,7 +121,7 @@ function Home() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <span className="text-sm font-semibold text-[#d1ae6e] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000 drop-shadow-sm">Transformação & Propósito</span>
-                <h1 className="text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#d1ae6e] bg-clip-text text-transparent bg-gradient-to-r from-[#d1ae6e] via-[#f7e1b5] to-[#d1ae6e] bg-[length:200%_auto] animate-[gold-shine_4s_linear_infinite]">Assumir Potência</span></h1>
+                <h1 className="text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#c5a059] bg-clip-text text-transparent bg-gradient-to-r from-[#c5a059] via-[#e8d2a6] to-[#c5a059] bg-[length:200%_auto] animate-[gold-shine_6s_linear_infinite]">Assumir Potência</span></h1>
                 <div className="flex items-center gap-6 py-4 animate-in fade-in zoom-in duration-1000 delay-500">
                   <div className="h-[2px] w-12 bg-[#d1ae6e]"></div>
                   <span className="text-xs font-bold text-[#d1ae6e] tracking-[0.5em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
@@ -427,7 +427,7 @@ function Home() {
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col items-center justify-center text-sm text-white/80 space-y-4">
               <p>&copy; 2026 Marlene Corrêa. Todos os direitos reservados</p>
-              <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#d1ae6e] via-[#f7e1b5] to-[#d1ae6e] bg-[length:200%_auto] animate-[gold-shine_4s_linear_infinite]">✦ Feito com excelência ✦</p>
+              <p className="font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#c5a059] via-[#e8d2a6] to-[#c5a059] bg-[length:200%_auto] animate-[gold-shine_6s_linear_infinite]">✦ Feito com excelência ✦</p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-[#d1ae6e] transition-colors">Privacidade</a>
                 <a href="#" className="hover:text-[#d1ae6e] transition-colors">Termos</a>
