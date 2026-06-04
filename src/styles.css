@@ -150,11 +150,11 @@
   }
 
   .btn-gold-premium {
-    @apply px-10 py-4 bg-gradient-to-r from-[#d1ae6e] to-[#ad8b4d] text-white font-semibold rounded-full hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-[#d1ae6e]/40 active:scale-95 text-sm uppercase tracking-widest text-center inline-block;
+    @apply px-10 py-4 bg-[#d1ae6e] text-white font-bold rounded-full hover:bg-[#c2a05d] transition-all duration-500 shadow-[0_10px_20px_-5px_rgba(209,174,110,0.4)] hover:shadow-[0_20px_30px_-10px_rgba(209,174,110,0.6)] active:scale-95 text-xs uppercase tracking-[0.2em] text-center inline-block border border-[#e5c98e];
   }
 
   .btn-wine-premium {
-    @apply px-10 py-4 bg-transparent border-2 border-[#921b3c] text-[#921b3c] font-semibold rounded-full hover:bg-[#921b3c] hover:text-white transition-all duration-500 hover:scale-105 active:scale-95 text-sm uppercase tracking-widest shadow-md hover:shadow-[#921b3c]/20 text-center inline-block;
+    @apply px-10 py-4 bg-transparent border-2 border-[#921b3c] text-[#921b3c] font-bold rounded-full hover:bg-[#921b3c] hover:text-white transition-all duration-500 active:scale-95 text-xs uppercase tracking-[0.2em] shadow-sm hover:shadow-[0_10px_20px_-5px_rgba(146,27,60,0.3)] text-center inline-block;
   }
 
   .testimonial-card {
