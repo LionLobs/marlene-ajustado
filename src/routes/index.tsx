@@ -35,6 +35,37 @@ function Home() {
   const [captureFormData, setCaptureFormData] = useState<FormData>({ name: "", email: "", phone: "", message: "" });
   const [, setShowCaptureForm] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const programsRef = useRef<HTMLDivElement>(null);
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const scrollContainer = (ref: React.RefObject<HTMLDivElement>) => {
+      if (!ref.current) return;
+      const container = ref.current;
+      let scrollAmount = 0;
+      const step = 1;
+      const interval = setInterval(() => {
+        if (window.innerWidth >= 768) {
+          clearInterval(interval);
+          return;
+        }
+        container.scrollLeft += step;
+        scrollAmount += step;
+        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+          container.scrollLeft = 0;
+        }
+      }, 30);
+      return () => clearInterval(interval);
+    };
+
+    const cleanupPrograms = scrollContainer(programsRef);
+    const cleanupTestimonials = scrollContainer(testimonialsRef);
+
+    return () => {
+      cleanupPrograms?.();
+      cleanupTestimonials?.();
+    };
+  }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
