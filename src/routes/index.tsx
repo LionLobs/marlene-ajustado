@@ -129,7 +129,7 @@ function Home() {
                 </div>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg font-light animate-in fade-in slide-in-from-bottom duration-1000 delay-700">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito.</p>
               </div>
-              <div className="space-y-4 border-l-2 border-[#d1ae6e]/20 pl-6 py-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-900">
+              <div className="space-y-4 border-l-2 border-[#8b7355]/20 pl-6 py-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-900">
                 <p className="text-gray-500 font-medium tracking-wide text-balance">Não é apenas sobre mudança profissional.</p>
                 <p className="text-[#921b3c] italic text-lg">"É sobre reconstruir identidade e assumir a potência que a maturidade trouxe."</p>
               </div>
