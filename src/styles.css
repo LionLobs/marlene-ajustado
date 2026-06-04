@@ -146,15 +146,15 @@
 
 @layer components {
   .premium-card {
-    @apply relative p-6 sm:p-8 bg-white rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)] hover:shadow-[0_30px_60px_-15px_rgba(146,27,60,0.25)] transition-all duration-700 border border-[#b8860b]/10 overflow-hidden hover:-translate-y-2;
+    @apply relative p-6 sm:p-8 bg-white rounded-[2.5rem] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)] hover:shadow-[0_30px_60px_-15px_rgba(146,27,60,0.25)] transition-all duration-700 border border-[#8b7355]/10 overflow-hidden hover:-translate-y-2;
   }
 
   .btn-gold-premium {
     @apply px-8 sm:px-10 py-4 font-bold rounded-full transition-all duration-700 active:scale-95 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-center inline-block relative overflow-hidden text-white;
-    background: linear-gradient(135deg, #d4af37 0%, #f9e29b 50%, #d4af37 100%);
+    background: linear-gradient(135deg, #8b7355 0%, #c5a059 50%, #8b7355 100%);
     background-size: 200% auto;
-    box-shadow: 0 12px 25px -5px rgba(212, 175, 55, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(249, 226, 155, 0.6);
+    box-shadow: 0 12px 25px -5px rgba(139, 115, 85, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(197, 160, 89, 0.4);
     animation: gold-shine 6s ease-in-out infinite;
   }
   
