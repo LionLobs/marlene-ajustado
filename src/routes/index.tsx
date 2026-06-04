@@ -210,6 +210,28 @@ function Home() {
         </div>
       </section>
 
+      {/* SCROLLING PARTNERS/TOPICS MARQUEE */}
+      <div className="bg-[#f9f7f4] border-y border-[#d1ae6e]/20">
+        <div className="marquee-container">
+          <div className="marquee-content">
+            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
+                <Star className="w-4 h-4 text-[#d1ae6e]" />
+              </div>
+            ))}
+          </div>
+          <div className="marquee-content" aria-hidden="true">
+            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
+                <Star className="w-4 h-4 text-[#d1ae6e]" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* TESTIMONIALS */}
       <section id="depoimentos" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#921b3c] to-[#ad4a60]">
         <div className="max-w-7xl mx-auto">
@@ -399,87 +421,6 @@ function Home() {
 
       {/* GLOBAL STYLES */}
       <style>{`
-        .btn-gold-premium {
-          position: relative;
-          display: inline-block;
-          padding: 18px 45px;
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: #1a1a1a;
-          text-decoration: none;
-          background: linear-gradient(135deg, #d4af37 0%, #f9e498 50%, #b8860b 100%);
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          overflow: hidden;
-          transition: all 0.4s ease;
-          box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-          font-family: 'Montserrat', sans-serif;
-        }
-        .btn-gold-premium::before {
-          content: '';
-          position: absolute;
-          top: 0; left: -100%;
-          width: 100%; height: 100%;
-          background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-          transition: all 0.6s ease;
-        }
-        .btn-gold-premium:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-          color: #000;
-        }
-        .btn-gold-premium:hover::before { left: 100%; }
-        .btn-gold-premium:active { transform: translateY(-1px); }
-
-        .btn-wine-premium {
-          padding: 18px 45px;
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          color: #ffffff;
-          text-decoration: none;
-          background: #921b3c;
-          border-radius: 4px;
-          transition: all 0.4s ease;
-          box-shadow: 0 4px 15px rgba(146, 27, 60, 0.3);
-        }
-        .btn-wine-premium:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(146, 27, 60, 0.5);
-        }
-
-        .premium-card {
-          background: #fff;
-          border-radius: 1.5rem;
-          padding: 2rem;
-          border: 1px solid #e5e5e5;
-          position: relative;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-        .premium-card:hover {
-          transform: translateY(-0.5rem);
-          box-shadow: 0 25px 50px -12px rgba(146, 27, 60, 0.25);
-          border-color: #d1ae6e;
-        }
-
-        .testimonial-card {
-          background: #fff;
-          border-radius: 1.5rem;
-          padding: 1.5rem;
-          border: 1px solid rgba(255,255,255,0.2);
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .testimonial-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-
         ::selection { background: #921b3c; color: #fff; }
       `}</style>
     </div>

@@ -157,3 +157,47 @@
     scroll-behavior: smooth;
   }
 }
+160: 
+161: @layer components {
+162:   .premium-card {
+163:     @apply relative p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#d1ae6e]/20 overflow-hidden;
+164:   }
+165: 
+166:   .btn-gold-premium {
+167:     @apply px-8 py-3 bg-[#d1ae6e] text-white font-semibold rounded-full hover:bg-[#ad8b4d] transition-all duration-300 shadow-md hover:shadow-xl active:scale-95;
+168:   }
+169: 
+170:   .btn-wine-premium {
+171:     @apply px-8 py-3 bg-transparent border-2 border-[#921b3c] text-[#921b3c] font-semibold rounded-full hover:bg-[#921b3c] hover:text-white transition-all duration-300 active:scale-95;
+172:   }
+173: 
+174:   .testimonial-card {
+175:     @apply bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-white hover:bg-white/20 transition-all duration-300;
+176:   }
+177: 
+178:   /* Scroll Elements Styles */
+179:   .marquee-container {
+180:     @apply flex overflow-hidden select-none gap-10 py-10;
+181:   }
+182: 
+183:   .marquee-content {
+184:     @apply flex shrink-0 justify-around items-center min-w-full gap-10 animate-marquee;
+185:   }
+186: 
+187:   @keyframes marquee {
+188:     from {
+189:       transform: translateX(0);
+190:     }
+191:     to {
+192:       transform: translateX(-100%);
+193:     }
+194:   }
+195: 
+196:   .animate-marquee {
+197:     animation: marquee 30s linear infinite;
+198:   }
+199: 
+200:   .marquee-container:hover .animate-marquee {
+201:     animation-play-state: paused;
+202:   }
+203: }
