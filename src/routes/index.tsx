@@ -79,24 +79,26 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#921b3c] shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-12 w-auto" />
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#921b3c]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3 group cursor-pointer">
+            <div className="relative">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-14 w-auto transition-transform duration-500 group-hover:scale-110" />
+            </div>
           </div>
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden md:flex gap-10">
             {["sobre","programas","depoimentos","servicos","faq","contato"].map((s) => (
-              <a key={s} href={`#${s}`} className="text-sm font-medium text-white/90 hover:text-[#d1ae6e] transition-colors duration-300 capitalize">{s === "faq" ? "FAQ" : s}</a>
+              <a key={s} href={`#${s}`} className="text-[13px] font-semibold text-white/80 hover:text-[#d1ae6e] transition-all duration-300 capitalize tracking-[0.2em] relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#d1ae6e] after:transition-all hover:after:w-full">{s === "faq" ? "FAQ" : s}</a>
             ))}
           </nav>
-          <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden text-white hover:text-[#d1ae6e] transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden p-2 text-white hover:text-[#d1ae6e] transition-colors rounded-full hover:bg-white/10">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={showMobileMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} /></svg>
           </button>
         </div>
         {showMobileMenu && (
-          <nav className="md:hidden bg-[#921b3c] border-t border-white/10 py-4 px-4 space-y-3">
+          <nav className="md:hidden bg-[#921b3c] border-t border-white/10 py-8 px-6 space-y-4 animate-in slide-in-from-top duration-500">
             {["sobre","programas","depoimentos","servicos","faq","contato"].map((s) => (
-              <a key={s} href={`#${s}`} onClick={() => setShowMobileMenu(false)} className="block text-sm font-medium text-white/90 hover:text-[#d1ae6e] transition-colors duration-300 py-2 capitalize">{s === "faq" ? "FAQ" : s}</a>
+              <a key={s} href={`#${s}`} onClick={() => setShowMobileMenu(false)} className="block text-lg font-serif text-white/90 hover:text-[#d1ae6e] transition-all duration-300 py-2 capitalize border-b border-white/5">{s === "faq" ? "FAQ" : s}</a>
             ))}
           </nav>
         )}
@@ -156,13 +158,15 @@ function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1 space-y-4">
-              <h2 className="text-4xl font-serif font-bold text-[#921b3c]">Expertise & Experiência</h2>
-              <div className="h-1 w-16 bg-gradient-to-r from-[#d1ae6e] to-[#ad4a60]"></div>
+              <h2 className="text-5xl font-serif font-bold text-[#921b3c] leading-tight">Expertise &<br />Experiência</h2>
+              <div className="section-underline"></div>
             </div>
-            <div className="lg:col-span-2 space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">Profissional em saúde mental como <span className="font-semibold text-[#921b3c]">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c]">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
-              <p className="text-lg text-gray-700 leading-relaxed">Conduzo mulheres que desejam romper padrões, ressignificar sua história e reconstruir carreira com propósito, maturidade emocional e direção.</p>
-              <p className="text-gray-600">Com mais de 20 anos de experiência no mercado corporativo, incluindo atuação como gerente de serviços em empresa multinacional, uno conhecimento organizacional à prática clínica.</p>
+            <div className="lg:col-span-2 space-y-8">
+              <p className="text-xl text-gray-700 leading-relaxed font-light">Profissional em saúde mental como <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
+              <p className="text-xl text-gray-700 leading-relaxed font-light">Conduzo mulheres que desejam romper padrões, ressignificar sua história e reconstruir carreira com propósito, maturidade emocional e direção.</p>
+              <div className="p-8 bg-white rounded-2xl shadow-sm border-l-4 border-[#d1ae6e]">
+                <p className="text-gray-600 italic leading-relaxed">"Com mais de 20 anos de experiência no mercado corporativo, incluindo atuação como gerente de serviços em empresa multinacional, uno conhecimento organizacional à prática clínica."</p>
+              </div>
             </div>
           </div>
         </div>
@@ -171,9 +175,10 @@ function Home() {
       {/* PROGRAMS */}
       <section id="programas" className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#921b3c]">Programas de Transformação</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Processos estruturados e seletivos para sua reconstrução profissional e pessoal</p>
+          <div className="text-center mb-20 space-y-4">
+            <h2 className="text-5xl lg:text-6xl font-serif font-bold text-[#921b3c]">Programas de Transformação</h2>
+            <div className="section-underline mx-auto"></div>
+            <p className="text-gray-500 text-xl max-w-2xl mx-auto font-light pt-4">Processos estruturados e seletivos para sua reconstrução profissional e pessoal</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
