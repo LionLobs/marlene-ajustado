@@ -191,7 +191,7 @@ function Home() {
                 <div className="space-y-4">
                   <div className="flex items-start justify-between">
                     <h3 className="text-2xl font-serif font-bold text-[#921b3c]">{program.title}</h3>
-                    {program.showLock && <Lock className="w-5 h-5 text-[#d1ae6e]" />}
+                    {program.showLock && <Lock className="w-5 h-5 text-[#8b7355]" />}
                   </div>
                   <div className="space-y-2">
                     <p className="text-sm font-semibold text-[#ad4a60] uppercase tracking-wide">{program.subtitle}</p>
