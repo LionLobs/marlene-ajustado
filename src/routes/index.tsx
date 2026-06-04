@@ -79,24 +79,26 @@ function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#921b3c] shadow-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-12 w-auto" />
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#921b3c]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3 group cursor-pointer">
+            <div className="relative">
+              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/Prancheta6_13c323ef.webp" alt="Marlene Corrêa - Psicanalista" className="h-14 w-auto transition-transform duration-500 group-hover:scale-110" />
+            </div>
           </div>
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden md:flex gap-10">
             {["sobre","programas","depoimentos","servicos","faq","contato"].map((s) => (
-              <a key={s} href={`#${s}`} className="text-sm font-medium text-white/90 hover:text-[#d1ae6e] transition-colors duration-300 capitalize">{s === "faq" ? "FAQ" : s}</a>
+              <a key={s} href={`#${s}`} className="text-[13px] font-semibold text-white/80 hover:text-[#d1ae6e] transition-all duration-300 capitalize tracking-[0.2em] relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-[#d1ae6e] after:transition-all hover:after:w-full">{s === "faq" ? "FAQ" : s}</a>
             ))}
           </nav>
-          <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden text-white hover:text-[#d1ae6e] transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="md:hidden p-2 text-white hover:text-[#d1ae6e] transition-colors rounded-full hover:bg-white/10">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={showMobileMenu ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} /></svg>
           </button>
         </div>
         {showMobileMenu && (
-          <nav className="md:hidden bg-[#921b3c] border-t border-white/10 py-4 px-4 space-y-3">
+          <nav className="md:hidden bg-[#921b3c] border-t border-white/10 py-8 px-6 space-y-4 animate-in slide-in-from-top duration-500">
             {["sobre","programas","depoimentos","servicos","faq","contato"].map((s) => (
-              <a key={s} href={`#${s}`} onClick={() => setShowMobileMenu(false)} className="block text-sm font-medium text-white/90 hover:text-[#d1ae6e] transition-colors duration-300 py-2 capitalize">{s === "faq" ? "FAQ" : s}</a>
+              <a key={s} href={`#${s}`} onClick={() => setShowMobileMenu(false)} className="block text-lg font-serif text-white/90 hover:text-[#d1ae6e] transition-all duration-300 py-2 capitalize border-b border-white/5">{s === "faq" ? "FAQ" : s}</a>
             ))}
           </nav>
         )}
@@ -117,23 +119,23 @@ function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <span className="text-sm font-semibold text-[#d1ae6e] tracking-widest uppercase">Transformação & Propósito</span>
-                <h1 className="text-5xl lg:text-6xl font-serif font-bold text-[#921b3c] leading-tight">Reconstruir Identidade, Assumir Potência</h1>
-                <div className="flex items-center gap-4 py-6">
-                  <div className="flex-1 h-0.5 bg-gradient-to-r from-[#d1ae6e] to-transparent"></div>
-                  <span className="text-xs sm:text-sm font-semibold text-[#d1ae6e] tracking-widest uppercase whitespace-nowrap">MARLENE CORRÊA</span>
-                  <div className="flex-1 h-0.5 bg-gradient-to-l from-[#d1ae6e] to-transparent"></div>
+              <div className="space-y-6">
+                <span className="text-sm font-semibold text-[#d1ae6e] tracking-[0.3em] uppercase animate-in fade-in slide-in-from-left duration-1000">Transformação & Propósito</span>
+                <h1 className="text-6xl lg:text-7xl font-serif font-bold text-[#921b3c] leading-[1.1] animate-in fade-in slide-in-from-left duration-1000 delay-200">Reconstruir Identidade, <span className="text-[#d1ae6e]">Assumir Potência</span></h1>
+                <div className="flex items-center gap-6 py-4 animate-in fade-in zoom-in duration-1000 delay-500">
+                  <div className="h-[1px] w-12 bg-[#d1ae6e]"></div>
+                  <span className="text-xs font-bold text-[#d1ae6e] tracking-[0.4em] uppercase whitespace-nowrap">MARLENE CORRÊA</span>
+                  <div className="h-[1px] w-12 bg-[#d1ae6e]"></div>
                 </div>
-                <p className="text-lg text-gray-700 leading-relaxed max-w-md">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito, maturidade emocional e direção.</p>
+                <p className="text-xl text-gray-600 leading-relaxed max-w-lg font-light animate-in fade-in slide-in-from-bottom duration-1000 delay-700">Saúde Mental e Reconstrução Profissional para Mulheres 40+. Rompa padrões, ressignifique sua história e reconstrua carreira com propósito.</p>
               </div>
-              <div className="space-y-3">
-                <p className="text-gray-600 font-medium">Não é apenas sobre mudança profissional.</p>
-                <p className="text-gray-600 italic">É sobre reconstruir identidade e assumir a potência que a maturidade trouxe.</p>
+              <div className="space-y-4 border-l-2 border-[#d1ae6e]/20 pl-6 py-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-900">
+                <p className="text-gray-500 font-medium tracking-wide text-balance">Não é apenas sobre mudança profissional.</p>
+                <p className="text-[#921b3c] italic text-lg">"É sobre reconstruir identidade e assumir a potência que a maturidade trouxe."</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="https://wa.me/5511973356733?text=Olá%20Marlene!%20Gostaria%20de%20solicitar%20uma%20aplicação%20para%20um%20de%20seus%20programas." target="_blank" rel="noopener noreferrer" className="btn-gold-premium inline-block text-center">Solicitar Aplicação</a>
-                <a href="#contato" className="btn-wine-premium inline-block text-center">Conhecer Mais</a>
+              <div className="flex flex-col sm:flex-row gap-6 pt-6 animate-in fade-in slide-in-from-bottom duration-1000 delay-1000">
+                <a href="https://wa.me/5511973356733?text=Olá%20Marlene!%20Gostaria%20de%20solicitar%20uma%20aplicação%20para%20um%20de%20seus%20programas." target="_blank" rel="noopener noreferrer" className="btn-gold-premium">Solicitar Aplicação</a>
+                <a href="#contato" className="btn-wine-premium">Conhecer Mais</a>
               </div>
             </div>
             <div className="relative h-96 lg:h-full min-h-96">
@@ -156,13 +158,15 @@ function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-1 space-y-4">
-              <h2 className="text-4xl font-serif font-bold text-[#921b3c]">Expertise & Experiência</h2>
-              <div className="h-1 w-16 bg-gradient-to-r from-[#d1ae6e] to-[#ad4a60]"></div>
+              <h2 className="text-5xl font-serif font-bold text-[#921b3c] leading-tight">Expertise &<br />Experiência</h2>
+              <div className="section-underline"></div>
             </div>
-            <div className="lg:col-span-2 space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">Profissional em saúde mental como <span className="font-semibold text-[#921b3c]">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c]">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
-              <p className="text-lg text-gray-700 leading-relaxed">Conduzo mulheres que desejam romper padrões, ressignificar sua história e reconstruir carreira com propósito, maturidade emocional e direção.</p>
-              <p className="text-gray-600">Com mais de 20 anos de experiência no mercado corporativo, incluindo atuação como gerente de serviços em empresa multinacional, uno conhecimento organizacional à prática clínica.</p>
+            <div className="lg:col-span-2 space-y-8">
+              <p className="text-xl text-gray-700 leading-relaxed font-light">Profissional em saúde mental como <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">psicanalista clínica</span> e <span className="font-semibold text-[#921b3c] border-b-2 border-[#d1ae6e]/30">mentora estratégica</span>, criadora do Programa Exclusivo de Reconstrução 40+.</p>
+              <p className="text-xl text-gray-700 leading-relaxed font-light">Conduzo mulheres que desejam romper padrões, ressignificar sua história e reconstruir carreira com propósito, maturidade emocional e direção.</p>
+              <div className="p-8 bg-white rounded-2xl shadow-sm border-l-4 border-[#d1ae6e]">
+                <p className="text-gray-600 italic leading-relaxed">"Com mais de 20 anos de experiência no mercado corporativo, incluindo atuação como gerente de serviços em empresa multinacional, uno conhecimento organizacional à prática clínica."</p>
+              </div>
             </div>
           </div>
         </div>
@@ -171,9 +175,10 @@ function Home() {
       {/* PROGRAMS */}
       <section id="programas" className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-[#921b3c]">Programas de Transformação</h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">Processos estruturados e seletivos para sua reconstrução profissional e pessoal</p>
+          <div className="text-center mb-20 space-y-4">
+            <h2 className="text-5xl lg:text-6xl font-serif font-bold text-[#921b3c]">Programas de Transformação</h2>
+            <div className="section-underline mx-auto"></div>
+            <p className="text-gray-500 text-xl max-w-2xl mx-auto font-light pt-4">Processos estruturados e seletivos para sua reconstrução profissional e pessoal</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -211,24 +216,22 @@ function Home() {
       </section>
 
       {/* SCROLLING PARTNERS/TOPICS MARQUEE */}
-      <div className="bg-[#f9f7f4] border-y border-[#d1ae6e]/20">
-        <div className="marquee-container">
-          <div className="marquee-content">
-            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-                <Star className="w-4 h-4 text-[#d1ae6e]" />
-              </div>
-            ))}
-          </div>
-          <div className="marquee-content" aria-hidden="true">
-            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-              <div key={idx} className="flex items-center gap-4">
-                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-                <Star className="w-4 h-4 text-[#d1ae6e]" />
-              </div>
-            ))}
-          </div>
+      <div className="marquee-container">
+        <div className="marquee-content">
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={idx} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
+        </div>
+        <div className="marquee-content" aria-hidden="true">
+          {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+            <div key={idx} className="flex items-center gap-10">
+              <span className="text-3xl font-serif font-bold text-[#921b3c]/20 hover:text-[#921b3c]/40 transition-colors duration-500 cursor-default tracking-widest">{text}</span>
+              <Star className="w-6 h-6 text-[#d1ae6e] opacity-40" />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -236,19 +239,20 @@ function Home() {
       <section id="depoimentos" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#921b3c] to-[#ad4a60]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-white">Histórias de Transformação</h2>
-            <p className="text-white/90 text-lg max-w-2xl mx-auto">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
+            <h2 className="text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">Histórias de Transformação</h2>
+            <div className="section-underline mx-auto bg-white/40"></div>
+            <p className="text-white/80 text-xl max-w-2xl mx-auto font-light pt-4">Veja como mulheres como você reconstruíram suas vidas e carreiras</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((t, i) => (
               <div key={i} className="testimonial-card group">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, j) => (<Star key={j} className="w-4 h-4 fill-[#d1ae6e] text-[#d1ae6e]" />))}
+                <div className="flex gap-1 mb-6">
+                  {[...Array(t.rating)].map((_, j) => (<Star key={j} className="w-5 h-5 fill-[#d1ae6e] text-[#d1ae6e] opacity-80" />))}
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-6 italic">"{t.text}"</p>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="font-semibold text-[#921b3c]">{t.name}</p>
-                  <p className="text-xs text-[#ad4a60] tracking-wide">{t.role}</p>
+                <p className="text-white/90 leading-relaxed mb-8 italic text-lg font-light line-clamp-6">"{t.text}"</p>
+                <div className="pt-6 border-t border-white/10 mt-auto">
+                  <p className="font-serif text-2xl text-[#d1ae6e] mb-1">{t.name}</p>
+                  <p className="text-[10px] text-white/50 tracking-[0.2em] uppercase">{t.role}</p>
                 </div>
               </div>
             ))}
@@ -265,8 +269,8 @@ function Home() {
             </div>
             <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-4">
-                <h2 className="text-4xl font-serif font-bold text-[#921b3c]">Saúde Mental Corporativa</h2>
-                <div className="h-1 w-16 bg-gradient-to-r from-[#d1ae6e] to-[#ad4a60]"></div>
+                <h2 className="text-5xl font-serif font-bold text-[#921b3c] leading-tight">Saúde Mental<br />Corporativa</h2>
+                <div className="section-underline"></div>
               </div>
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 leading-relaxed">Programas Corporativos em Saúde Mental & NR-1. Atuação estratégica para empresas com foco em prevenção de riscos psicossociais e implementação de programas contínuos de saúde mental.</p>
