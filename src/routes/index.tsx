@@ -201,7 +201,7 @@ function Home() {
                   <div className="space-y-3 pt-4 border-t border-gray-200">
                     {program.features.map((f, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        {i === 0 && program.id !== "atendimentos" ? <Calendar className="w-4 h-4 text-[#d1ae6e]" /> : <CheckCircle2 className="w-4 h-4 text-[#d1ae6e]" />}
+                        {i === 0 && program.id !== "atendimentos" ? <Calendar className="w-4 h-4 text-[#8b7355]" /> : <CheckCircle2 className="w-4 h-4 text-[#8b7355]" />}
                         <span className="text-sm text-gray-700">{f}</span>
                       </div>
                     ))}
