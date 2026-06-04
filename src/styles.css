@@ -151,18 +151,18 @@
 
   .btn-gold-premium {
     @apply px-8 sm:px-10 py-4 font-bold rounded-full transition-all duration-700 active:scale-95 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-center inline-block relative overflow-hidden text-white;
-    background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);
+    background: linear-gradient(135deg, #c5a059 0%, #f1e4c1 50%, #c5a059 100%);
     background-size: 200% auto;
-    box-shadow: 0 12px 25px -5px rgba(184, 134, 11, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(218, 165, 32, 0.6);
-    animation: gold-shine 5s ease-in-out infinite;
+    box-shadow: 0 12px 25px -5px rgba(197, 160, 89, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(241, 228, 193, 0.5);
+    animation: gold-shine 6s ease-in-out infinite;
   }
   
   .btn-gold-premium:hover {
     @apply -translate-y-1;
     background-position: right center;
-    box-shadow: 0 18px 35px -10px rgba(184, 134, 11, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.4);
-    border-color: rgba(218, 165, 32, 0.9);
+    box-shadow: 0 18px 35px -10px rgba(197, 160, 89, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    border-color: rgba(241, 228, 193, 0.8);
   }
   
   .btn-gold-premium::after {
@@ -220,9 +220,9 @@
   /* Elegant Section Title Underline */
   .section-underline {
     @apply h-1 w-24 rounded-full mt-4;
-    background: linear-gradient(90deg, #b8860b 0%, #921b3c 50%, #b8860b 100%);
+    background: linear-gradient(90deg, #c5a059 0%, #921b3c 50%, #c5a059 100%);
     background-size: 200% auto;
-    animation: gold-shine 6s linear infinite;
+    animation: gold-shine 7s linear infinite;
   }
 }
 
