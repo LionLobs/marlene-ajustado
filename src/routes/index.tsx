@@ -211,28 +211,28 @@ function Home() {
       </section>
 
       {/* SCROLLING PARTNERS/TOPICS MARQUEE */}
-214:       <div className="bg-[#f9f7f4] border-y border-[#d1ae6e]/20">
-215:         <div className="marquee-container">
-216:           <div className="marquee-content">
-217:             {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-218:               <div key={idx} className="flex items-center gap-4">
-219:                 <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-220:                 <Star className="w-4 h-4 text-[#d1ae6e]" />
-221:               </div>
-222:             ))}
-223:           </div>
-224:           <div className="marquee-content" aria-hidden="true">
-225:             {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
-226:               <div key={idx} className="flex items-center gap-4">
-227:                 <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
-228:                 <Star className="w-4 h-4 text-[#d1ae6e]" />
-229:               </div>
-230:             ))}
-231:           </div>
-232:         </div>
-233:       </div>
-234: 
-235:       {/* TESTIMONIALS */}
+      <div className="bg-[#f9f7f4] border-y border-[#d1ae6e]/20">
+        <div className="marquee-container">
+          <div className="marquee-content">
+            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
+                <Star className="w-4 h-4 text-[#d1ae6e]" />
+              </div>
+            ))}
+          </div>
+          <div className="marquee-content" aria-hidden="true">
+            {["AUTOCONHECIMENTO", "TRANSFORMAÇÃO", "PROPÓSITO", "SAÚDE MENTAL", "CARREIRA 40+", "PSICANÁLISE", "IDENTIDADE", "ESTRATÉGIA"].map((text, idx) => (
+              <div key={idx} className="flex items-center gap-4">
+                <span className="text-2xl font-serif font-bold text-[#921b3c]/30">{text}</span>
+                <Star className="w-4 h-4 text-[#d1ae6e]" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* TESTIMONIALS */}
       <section id="depoimentos" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#921b3c] to-[#ad4a60]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 space-y-4">
