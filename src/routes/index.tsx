@@ -144,7 +144,7 @@ function Home() {
                 <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663407140865/Ly7Dzrb6G9DxhVvDjXJx6j/marlene_5ca82bea.png" alt="Marlene Corrêa" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#921b3c]/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#d1ae6e] to-[#ad4a60] rounded-full opacity-20 blur-2xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-[#8b7355] to-[#ad4a60] rounded-full opacity-20 blur-2xl"></div>
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-[#ad4a60] to-[#921b3c] rounded-full opacity-20 blur-2xl"></div>
             </div>
           </div>
